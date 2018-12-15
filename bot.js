@@ -971,7 +971,24 @@ var prefix = "$"
   
   });
 
+client.on("message", message => {
+    const prefix = "$"
+              
+          if(!message.channel.guild) return;
+   if(message.author.bot) return;
+      if(message.content === "$image"){ 
+          const embed = new Discord.RichEmbed()
+  
+      .setTitle(`هذا هو شعار سيرفر ** ${message.guild.name} **`)
+  .setAuthor(message.author.username, message.guild.iconrURL)
+    .setColor("PURPLE")
+    .setImage(message.guild.iconURL)
+    .setURL(message.guild.iconrURL)
+                    .setTimestamp()
 
+   message.channel.send({embed});
+      }
+  });
 
 
 client.login(process.env.BOT_TOKEN);
