@@ -612,7 +612,7 @@ client.on('guildMemberAdd', member=> {
 
 
 client.on('message', message => {
-if(message.content == '523551655724056585') {
+if(message.content == '523603515680096260') {
 message.channel.startTyping()
 setTimeout(() => { 
 message.channel.stopTyping()
@@ -852,7 +852,7 @@ var prefix = "$";
     .addField('•🕣|Time Create » مدة انشاء حسابك', member.user.createdAt.toLocaleString(), true)
  
                                        
-     .setFooter("SOON")
+     .setFooter("LAST")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -862,7 +862,7 @@ var prefix = "$";
 client.on('message', ( message ) => {
   if(message.author.bot) return;
 
-  if(message.channel.id !== '497870034354438145') return;
+  if(message.channel.id !== '499981383339606027') return;
 
   let types = [
     'jpg',
